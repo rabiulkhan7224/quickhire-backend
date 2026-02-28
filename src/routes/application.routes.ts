@@ -8,4 +8,4 @@ const router = Router();
 // Public as per spec
 router.post('/', validate(createApplicationSchema), createApplication);
 
-export default router;
+export const applicationRoutes= router;

@@ -19,4 +19,4 @@ router.get('/:id', getJobById);
 router.post('/', authMiddleware, adminOnly, validate(createJobSchema), createJob);
 router.delete('/:id', authMiddleware, adminOnly, deleteJob);
 
-export default router;
+export const jobRoutes= router;
