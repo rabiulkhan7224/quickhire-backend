@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import app from './app';
 import connectDB from './config/db';
+import createAdminUser from './seed/admin.seed';
 const PORT = process.env.PORT || 5000;
 
 const startServer = async () => {
@@ -8,6 +9,8 @@ const startServer = async () => {
   app.listen(PORT, () => {
     console.log(`🚀 QuickHire Backend running on http://localhost:${PORT}`);
   });
+  // seed admin user
+  createAdminUser(); 
 };
 
 startServer();
